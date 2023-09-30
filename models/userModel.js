@@ -15,13 +15,13 @@ const userSchema = new Schema(
       type: String,
       type: String,
       unique: true,
-      required: true,
+      required: [true, "Please Enter email"],
       lowercase: true,
     },
     phone: {
       type: String,
       required: true,
-      unique: true,
+      unique: [true, "phone Already in use"],
     },
     password: {
       type: String,
